@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two stage carousel | Advanced CSS Selectors</title>
+    <style>
+      body {
+        background-color: #234;
+      }
+      .carousel {
+        width: 840px;
+        margin: 50px auto 0px auto;
+        overflow: hidden;
+        box-shadow: 0 0 10px 2px #111;
+      }
+      .carousel .slide {
+        width: 2700px;
+        transition: 1s;
+      }
+      .carousel .controls {
+        text-align: center;
+        height: 43px;
+      }
+      .carousel .controls a {
+        text-decoration: none;
+        font-size: 35px;
+        color: white;
+        line-height: 40px;
+      }
+      .carousel .controls a:hover {
+        text-decoration: none;
+        color: rgb(250, 173, 29);
+        transition: 0.5s;
+        
+      }
+      .carousel #button-1:target .slide {
+        transform: translateX(0px);
+      }
+      .carousel #button-2:target .slide {
+        transform: translateX(-840px);
+      }
+      .carousel #button-3:target .slide {
+        transform: translateX(-1680px);
+      }
+      a {
+        display: inline-block;
+      }
+      a:hover:first-child {
+        transform: translateX(-7px);
+      }
+      a:nth-child(2):hover{
+        transform: translateY(-5px);
+      }
+      a:nth-child(3):hover{
+        transform: translateX(7px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div id="button-1">
+        <div id="button-2">
+          <div id="button-3">
+            <div class="slide">
+              <img
+                src="https://fastly.picsum.photos/id/323/280/400.jpg?hmac=9oIPf8Ym1urAHKQF6yLizdDjGA0LuoDdWufp91bM-q4"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/322/280/400.jpg?hmac=kEisa0oUZXPh5eEuXPbrkmMx9inHm7zSr9A9Hu81xvw"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/638/280/400.jpg?hmac=PVsKThlLtk5YaGFj8ybq3q4-2VQ0iO9Hs9pyMZdEV7g"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/563/280/400.jpg?hmac=fFS12wbc0Gqnhn-jSzGn9K0NvplFetZG3e3MAbf6FUE"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/542/280/400.jpg?hmac=T46yj79Kb2ey0TrYBI-fIOZ-7Lx2Ud1k8N34FIm5gFI"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/199/280/400.jpg?hmac=f134e_qSqahrU5ws7T2vljrLEeNwOC0Zwl4wKMJa8kk"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/176/280/400.jpg?hmac=wN9qGKbaLtxoBTPcAwe__gTdWyqYJEAiec0P25oNLmc"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/646/280/400.jpg?hmac=CRWH9MuwH3NWHiMFlfGc2khfgHJU1tIhkX3emyDiCZs"
+                alt=""
+              /><img
+                src="https://fastly.picsum.photos/id/1076/280/400.jpg?hmac=JPOzEXq7BAaE-_8g13Jt89wXpWLAkwNF_fc80FPpNdU"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <a href="#button-1">①</a>
+        <a href="#button-2">②</a>
+        <a href="#button-3">③</a>
+      </div>
+    </div>
+  </body>
+</html>
